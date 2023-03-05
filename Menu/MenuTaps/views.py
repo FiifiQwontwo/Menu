@@ -20,4 +20,4 @@ def home_page(request, category_slug=None):
         'product': product,
 
     }
-    return render(request, "home/yindex.html", context)
+    return render(request, "home/index.html", context)

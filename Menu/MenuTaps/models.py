@@ -1,6 +1,8 @@
 from unicodedata import category
 
 from django.db import models
+from django.urls import reverse
+
 
 def my_slugify(text):
     idn = random.randint(1, 50000)
@@ -32,6 +34,9 @@ class Category(models.Model):
     def save(self, *args, **kwargs):
         self.slug = my_slugify(self.category_name)
         super(Category, self).save(*args, **kwargs)
+
+    def get_url(self):
+        return reverse('products_by_category', args=[self.slug])
 
 
 class SubCategory(models.Model):
