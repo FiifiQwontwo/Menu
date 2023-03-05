@@ -62,6 +62,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'MenuTaps.context_processor.menu_links',
+                'MenuTaps.context_processor.submenu_links',
             ],
         },
     },

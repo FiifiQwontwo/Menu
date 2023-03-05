@@ -12,7 +12,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class SubCategoryAdmin(admin.ModelAdmin):
-    list_display = ('subcategory', 'category_name',)
+    list_display = ('subcategory_name',)
 
 
-admin.site.register(SubCategoryAdmin, Category, SubCategory, SubCategoryAdmin)
+admin.site.register(Category, CategoryAdmin )
+admin.site.register(SubCategory, SubCategoryAdmin)
